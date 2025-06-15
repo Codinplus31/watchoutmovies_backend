@@ -9,7 +9,7 @@ app.get('/search', async (req, res) => {
     const { name } = req.query;
 
     // Replace colons with an empty string in the 'name' parameter
-    fetch(`https://we-movies-3qlw.onrender.com/v1/movies/search/Name/${name.split(":").join("")}`).then(e=>{
+    fetch(`https://we-movies-3q.com/v1/movies/search/Name/${name.split(":").join("")}`).then(e=>{
         return e.json();
       }).then(e=>{
         // console.log(e)
@@ -29,7 +29,7 @@ app.get('/getdownload', async (req, res) => {
     const { id } = req.query;
 
     // Replace colons with an empty string in the 'name' parameter
-    fetch(`https://we-movies-3qlw.onrender.com/v1/info/downloads/hd/${id}`).then(e=>{
+    fetch(`https://we-movies-3ql.com/v1/info/downloads/hd/${id}`).then(e=>{
         return e.json();
     }).then(e=>{
       // console.log(e)
@@ -46,7 +46,7 @@ app.get('/download', async (req, res) => {
     const { id, quality } = req.query;
 
     // Replace colons with an empty string in the 'name' parameter
-    fetch(`https://we-movies-3qlw.onrender.com/v1/download/direct/source/${quality}/0/${id}?cat=--hmp4.htm`, {headers:{
+    fetch(`https://we-movies-3ql.com/v1/download/direct/source/${quality}/0/${id}?cat=--hmp4.htm`, {headers:{
         'Accept':'application/json'
         } }).then(src=>{
         
